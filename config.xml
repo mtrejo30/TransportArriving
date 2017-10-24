@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.mtrejo.transportarriving" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Transport Arriving</name>
+        <name>Transport Arriving</name>
 
     <description>System to notificate transport arriving.</description>
 
@@ -8,6 +8,8 @@
     
     <content src="index.html" />
 	
+	<preference name="phonegap-version" value="cli-7.0.1" />
+   
     <plugin name="cordova-plugin-camera" spec="~2.4.0">
 	    <variable name="CAMERA_USAGE_DESCRIPTION" value="Allow the app to use your camera" />
     	<variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Allow the app to access your photos" />
@@ -69,4 +71,11 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <platform name="android">
+		<config-file target="AndroidManifest.xml" parent="/*" mode="merge">
+			<uses-permission android:name="android.permission.CAMERA" />
+			<uses-feature android:name="android.hardware.camera" />
+			<uses-feature android:name="android.hardware.camera.autofocus" />
+		</config-file>
+	</platform>
 </widget>
