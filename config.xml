@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.mtrejo.transportarriving" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Transport Arriving</name>
+
+    <description>System to notificate transport arriving.</description>
+
+    <author href="http://www.mtrejo.com" email="mtrejo@outlook.com">Miguel Trejo</author>
+    
+    <content src="index.html" />
+	
+    <plugin name="cordova-plugin-camera" spec="~2.4.0">
+	    <variable name="CAMERA_USAGE_DESCRIPTION" value="Allow the app to use your camera" />
+    	<variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Allow the app to access your photos" />
+	</plugin>
+    <plugin name="cordova-plugin-ios-camera-permissions" spec="~1.1.1">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value="This app needs camera access" />
+        <variable name="MICROPHONE_USAGE_DESCRIPTION" value="This app needs microphone access" />
+        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="This app needs photo library access" />
+    </plugin>
+	<plugin name="cordova-plugin-media-capture" spec="~1.4.2">
+      <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Allow the app to access your photos" />
+    </plugin>
+    <plugin name="cordova-plugin-file" spec="~4.3.3" />
+	<plugin name="cordova-plugin-device" spec="~1.1.5" />
+	<plugin name="cordova-plugin-barcodescanner" spec="~0.7.0" />
+    <platform name="ios">
+		<!-- iOS 7.0+ -->
+		<!-- iPhone / iPod Touch  -->
+		<icon src="resources/icons/Icon-App-60x60@1x.png" width="60" height="60" />
+		<icon src="resources/icons/Icon-App-60x60@2x.png" width="120" height="120" />
+		<icon src="resources/icons/Icon-App-60x60@3x.png" width="180" height="180" />
+		<!-- iPad -->
+		<icon src="resources/icons/Icon-App-76x76@1x.png" width="76" height="76" />
+		<icon src="resources/icons/Icon-App-76x76@2x.png" width="152" height="152" />
+		<icon src="resources/icons/Icon-App-76x76@3x.png" width="228" height="228" />
+		<!-- iOS 6.1 -->
+		<!-- Spotlight Icon -->
+		<icon src="resources/icons/Icon-App-40x40@1x.png" width="40" height="40" />
+		<icon src="resources/icons/Icon-App-40x40@2x.png" width="80" height="80" />
+		<icon src="resources/icons/Icon-App-40x40@3x.png" width="120" height="120" />
+		<!-- iPhone / iPod Touch -->
+		<icon src="resources/icons/Icon-App-57x57@1x.png" width="57" height="57" />
+		<icon src="resources/icons/Icon-App-57x57@2x.png" width="114" height="114" />
+		<!-- iPad -->
+		<icon src="resources/icons/Icon-App-72x72@1x.png" width="72" height="72" />
+		<icon src="resources/icons/Icon-App-72x72@2x.png" width="144" height="144" />
+		<!-- iPhone Spotlight and Settings Icon -->
+		<icon src="resources/icons/Icon-App-29x29@1x.png" width="29" height="29" />
+		<icon src="resources/icons/Icon-App-29x29@2x.png" width="58" height="58" />
+		<icon src="resources/icons/Icon-App-29x29@3x.png" width="87" height="87" />
+		<!-- iPad Spotlight and Settings Icon -->
+		<icon src="resources/icons/Icon-Small-50x50@1x.png" width="50" height="50" />
+		<icon src="resources/icons/Icon-Small-50x50@2x.png" width="100" height="100" />
+    </platform>
+    <platform name="android">
+        <icon src="resources/icons/android/mipmap-ldpi/ic_launcher.png" density="ldpi" />
+        <icon src="resources/icons/android/mipmap-mdpi/ic_launcher.png" density="mdpi" />
+        <icon src="resources/icons/android/mipmap-hdpi/ic_launcher.png" density="hdpi" />
+        <icon src="resources/icons/android/mipmap-xhdpi/ic_launcher.png" density="xhdpi" />
+        <icon src="resources/icons/android/mipmap-xxhdpi/ic_launcher.png" density="xxhdpi" />
+        <icon src="resources/icons/android/mipmap-xxxhdpi/ic_launcher.png" density="xxxhdpi" />
+    </platform>
+    
+	<access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+	
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>
