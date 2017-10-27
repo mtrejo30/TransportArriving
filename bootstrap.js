@@ -1399,7 +1399,10 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "TransportArriving.view.Main": [
     "widget.main"
-  ]
+  ],
+  "TransportArriving.view.Login": [
+	    "widget.loginform"
+	  ]
 });
 
 

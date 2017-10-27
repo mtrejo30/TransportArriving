@@ -8,6 +8,8 @@
     
     <content src="index.html" />
 	
+	<preference name="phonegap-version" value="cli-7.0.1" />
+   
     <plugin name="cordova-plugin-camera" spec="~2.4.0">
 	    <variable name="CAMERA_USAGE_DESCRIPTION" value="Allow the app to use your camera" />
     	<variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Allow the app to access your photos" />
@@ -69,4 +71,11 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <platform name="android">
+		<config-file target="AndroidManifest.xml" parent="/*" mode="merge">
+			<uses-permission android:name="android.permission.CAMERA" />
+			<uses-feature android:name="android.hardware.camera" />
+			<uses-feature android:name="android.hardware.camera.autofocus" />
+		</config-file>
+	</platform>
 </widget>

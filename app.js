@@ -12,13 +12,47 @@
 
 Ext.application({
     name: 'TransportArriving',
+    
+    sessionTimeout: 1000 * 60 * 60,
 
     requires: [
-        'Ext.MessageBox'
+    	'TransportArriving.util.Config', 
+        'Ext.MessageBox',
+        'Ext.Toolbar',
+        'Ext.Label',
+        'Ext.form.FieldSet',
+        'Ext.field.Text',
+        'Ext.field.Password',
+        'Ext.util.DelayedTask'
     ],
 
     views: [
+        'MyViewport',
+        'CaseAdd',
+        'CaseDetail'
+    ],
+
+    controllers:[
+        'Login',
+        'Case',
+        'CaseDetail',
         'Main'
+    ],
+
+    models: [
+        'CurrentUser',
+        'Case',
+        'Viewcase',
+        'Product',
+        'Company'
+    ],
+
+    stores: [
+        'CurrentUser',
+        'Case',
+        'Viewcase',
+        'Product',
+        'Company'
     ],
 
     icon: {
@@ -44,9 +78,18 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('TransportArriving.view.Main'));
+        Ext.Viewport.add(Ext.create('TransportArriving.view.MyViewport', {fullscreen: true}));
     },
 
+    switchMainView: function(newView, config) {
+        if (this.currentView != false) {
+            Ext.Viewport.remove(this.currentView);
+        }
+
+        this.currentView = Ext.create(newView, config);
+        Ext.Viewport.add(this.currentView);
+    },
+    
     onUpdated: function() {
         Ext.Msg.confirm(
             "Application Update",
