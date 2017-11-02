@@ -1,34 +1,22 @@
 {
-    /**
-     * The application's namespace, used by Sencha Command to generate classes
-     */
-    "name": "TransportArriving",
-
-    /**
+	"name": "TransportArriving",/**
      * The file path to this application's front HTML document, relative to this app.json file
      */
-    "indexHtmlPath": "index.html",
-
-    /**
+	"indexHtmlPath": "index.html",/**
      * The Sencha Framework for this application: "ext" or "touch".
      */
-    "framework": "touch",
-
-    "classpath": [
-        "app",
-        "app.js"
-    ],
-
-    /**
+	"framework": "touch",
+	"classpath": [
+		"app",
+		"app.js"
+	],/**
      * The absolute URL to this application in development environment, i.e: the URL to run this application
      * on your web browser during development, e.g: "http://localhost/myapp/index.html".
      *
      * This value is needed when build to resolve your application's dependencies if it requires server-side resources
      * that are not accessible via file system protocol.
      */
-    "url": null,
-
-    /**
+	"url": null,/**
      * List of all JavaScript assets in the right execution order.
      * Each item is an object with the following format:
      *      {
@@ -48,23 +36,21 @@
      *
      *      }
      */
-    "js": [
-        {
-            "path": "touch/sencha-touch.js",
-            "x-bootstrap": true
-        },
-        {
-            "path": "bootstrap.js",
-            "x-bootstrap": true
-        },
-        {
-            "path": "app.js",
-            "bundle": true,  /* Indicates that all class dependencies are concatenated into this file when build */
-            "update": "delta"
-        }
-    ],
-
-    /**
+	"js": [
+		{
+			"path": "touch/sencha-touch.js",
+			"x-bootstrap": true
+		},
+		{
+			"path": "bootstrap.js",
+			"x-bootstrap": true
+		},
+		{
+			"path": "app.js",
+			"bundle": true,/* Indicates that all class dependencies are concatenated into this file when build */
+			"update": "delta"
+		}
+	],/**
      * List of all CSS assets in the right inclusion order.
      * Each item is an object with the following format:
      *      {
@@ -80,64 +66,46 @@
      *
      *      }
      */
-    "css": [
-        {
-            "path": "resources/css/app.css",
-            "update": "delta"
-        }
-    ],
-
-    /**
+	"css": [
+		{
+			"path": "resources/css/app.css",
+			"update": "delta"
+		}
+	],/**
      * Used to automatically generate cache.manifest (HTML 5 application cache manifest) file when you build
      */
-    "appCache": {
-        /**
-         * List of items in the CACHE MANIFEST section
-         */
-        "cache": [
-            "index.html"
-        ],
-        /**
+	"appCache": {
+		"cache": [
+			"index.html"
+		],/**
          * List of items in the NETWORK section
          */
-        "network": [
-            "*"
-        ],
-        /**
+		"network": [
+			"*"
+		],/**
          * List of items in the FALLBACK section
          */
-        "fallback": []
-    },
-
-    /**
+		"fallback": []
+	},/**
      * Extra resources to be copied along when build
      */
-    "resources": [
-        "resources/images",
-        "resources/icons",
-        "resources/startup"
-    ],
-
-    /**
+	"resources": [
+		"resources/images",
+		"resources/icons",
+		"resources/startup"
+	],/**
      * File / directory name matchers to ignore when copying to the builds, must be valid regular expressions
      */
-    "ignore": [
-        "\\.svn$"
-    ],
-
-    /**
+	"ignore": [
+		"\\.svn$"
+	],/**
      * Directory path to store all previous production builds. Note that the content generated inside this directory
      * must be kept intact for proper generation of deltas between updates
      */
-    "archivePath": "archive",
-
-    /**
+	"archivePath": "archive",/**
      * List of package names to require for the cmd build process
      */
-    "requires": [
-    ],
-
-    /**
+	"requires": [],/**
      * Controls for localStorage caching
      *   "cache": {
      *       // This property controls whether localStorage caching of this manifest file is on or off.
@@ -152,14 +120,12 @@
      *       "deltas": "deltas"
      *   }
      */
-    "cache": {
-        "enable": true,
-        "deltas": "deltas"
-    },
-
-    /**
+	"cache": {
+		"enable": true,
+		"deltas": "deltas"
+	},/**
      * Uniquely generated id for this application, used as prefix for localStorage keys.
      * Normally you should never change this value.
      */
-    "id": "18b3d351-3c61-4f0a-ae09-f1115a6cd509"
+	"id": "18b3d351-3c61-4f0a-ae09-f1115a6cd509"
 }
