@@ -1397,12 +1397,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
-  "TransportArriving.view.Main": [
-    "widget.main"
-  ],
-  "TransportArriving.view.Login": [
-	    "widget.loginform"
-	  ]
+  "TransportArriving.view.MyViewport": [
+    "widget.myviewport"
+  ]
 });
 
 
