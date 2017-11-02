@@ -10,7 +10,8 @@
 	<content src="index.html" />
 
 	<preference name="phonegap-version" value="cli-7.0.1" />
-
+	<preference name="EnableLocation" value="true" />
+	
 	<plugin name="cordova-plugin-camera" spec="~2.4.0">
 		<variable name="CAMERA_USAGE_DESCRIPTION" value="Allow the app to use your camera" />
 		<variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Allow the app to access your photos" />
