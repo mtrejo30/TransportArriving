@@ -11,6 +11,7 @@
 
 	<preference name="phonegap-version" value="cli-7.0.1" />
 	<preference name="EnableLocation" value="true" />
+	<preference name="android-targetSdkVersion" value="23"/>
 	
 	<plugin name="cordova-plugin-camera" spec="~2.4.0">
 		<variable name="CAMERA_USAGE_DESCRIPTION" value="Allow the app to use your camera" />
