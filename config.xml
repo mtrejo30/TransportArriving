@@ -97,7 +97,7 @@
 			density="xxhdpi" />
 		<icon src="resources/icons/android/mipmap-xxxhdpi/ic_launcher.png"
 			density="xxxhdpi" />
-		<config-file target="AndroidManifest.xml" parent="/*" mode="merge">
+		<config-file target="AndroidManifest.xml" parent="/*" mode="add">
 			<activity android:launchMode="singleTop" />
 		</config-file>
 	</platform>
