@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.mtrejo.transportarriving" version="0.0.1.1.0"
-	xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  xmlns="http://www.w3.org/ns/widgets"
+   xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>Transport Arriving</name>
 
 	<description>System to notificate transport arriving.</description>
@@ -11,7 +13,8 @@
 
 	<preference name="phonegap-version" value="cli-7.0.1" />
 	<preference name="EnableLocation" value="true" />
-  <!-- Android only -->
+	
+  	<!-- Android only -->
     <preference name="android-build-tool" value="ant|gradle" />
 	<preference name="android-targetSdkVersion" value="23"/>
 	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
@@ -77,6 +80,9 @@
 			height="50" />
 		<icon src="resources/icons/Icon-Small-50x50@2x.png" width="100"
 			height="100" />
+			
+		<allow-intent href="itms:*" />
+		<allow-intent href="itms-apps:*" />
 	</platform>
 	<platform name="android">
 		<icon src="resources/icons/android/mipmap-ldpi/ic_launcher.png"
@@ -91,20 +97,12 @@
 			density="xxhdpi" />
 		<icon src="resources/icons/android/mipmap-xxxhdpi/ic_launcher.png"
 			density="xxxhdpi" />
+		<config-file target="AndroidManifest.xml" parent="/*" mode="merge">
+			<activity android:launchMode="singleTop" />
+		</config-file>
 	</platform>
 
 	<access origin="*" />
 	<allow-intent href="http://*/*" />
 	<allow-intent href="https://*/*" />
-
-	<platform name="ios">
-		<allow-intent href="itms:*" />
-		<allow-intent href="itms-apps:*" />
-	</platform>
-	
-	  <config-file platform="android" target="AndroidManifest.xml" parent="/*" mode="merge">
-		  <uses-permission android:name="android.permission.CAMERA" />
-		  <uses-feature android:name="android.hardware.camera" />
-		  <uses-feature android:name="android.hardware.camera.autofocus" />
-		</config-file>
 </widget>
